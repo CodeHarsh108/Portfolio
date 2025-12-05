@@ -17,6 +17,7 @@ export interface ExperienceItem {
 }
 
 export interface ProjectItem {
+  subtitle: any;
   title: string;
   description: string;
   tags: string[];
@@ -33,6 +34,8 @@ export interface TechItem {
 }
 
 export interface EducationItem {
+  additionalInfo: any;
+  coursework: boolean;
   institution: string;
   degree: string;
   period: string;

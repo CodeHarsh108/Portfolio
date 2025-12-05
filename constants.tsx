@@ -5,136 +5,195 @@ import {
   LinkedInIcon, 
   MailIcon,
   ReactLogo,
-  TypescriptLogo,
-  NextLogo,
-  TailwindLogo,
   JavaScriptLogo,
   PythonLogo,
-  NodeLogo,
   GitLogo,
   VsCodeLogo,
-  FigmaLogo,
   MongoDBLogo,
   PostgreSQLLogo,
-  AWSLogo,
-  DockerLogo,
   HTMLLogo,
-  CSSLogo
+  CSSLogo,
+  TailwindLogo,
 } from './components/Icons';
 import { SocialLink, ExperienceItem, ProjectItem, TechItem, EducationItem } from './types';
 
+// Create missing icon components as text fallbacks
+const JavaIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>J</span>;
+
+const SpringIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>S</span>;
+
+const SpringBootIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>SB</span>;
+
+const ShieldIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>🔒</span>;
+
+const DatabaseIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>DB</span>;
+
+const HibernateIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>H</span>;
+
+const ApiIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>API</span>;
+
+const ReduxIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>R</span>;
+
+const BootstrapIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>B</span>;
+
+const MySqlIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>SQL</span>;
+
+const RedisIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>RD</span>;
+
+const PostmanIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>PM</span>;
+
+const MavenIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>M</span>;
+
+const SwaggerIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>SW</span>;
+
+const IntelliJIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>IJ</span>;
+
+const JUnitIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>JU</span>;
+
+const MockitoIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>MT</span>;
+
+const CCPPIcon = ({ className }: { className?: string }) => 
+  <span className={`font-bold ${className || ''}`}>C++</span>;
+
 export const BIO = {
-  name: "Shorya Bansal",
-  firstName: "Shorya",
-  lastName: "Bansal",
-  title: "Full Stack Developer",
+  name: "Harsh Patil",
+  firstName: "Harsh",
+  lastName: "Patil",
+  title: "Full Stack Java Developer",
   headline: "meet your\nnew favourite developer",
-  description: "I build interactive web apps using React, Next.js, and TypeScript. With a focus on UI design and performance, I aim to create digital experiences that feel as timeless as print.",
+  description: "I craft robust backend systems using Java and Spring Boot. With a focus on clean architecture and reliability, I aim to build digital foundations that feel as timeless as the tools that shaped software's early days.",
   avatar: "/image.png"
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { name: 'Email', url: 'mailto:bansalshorya13@gmail.com', icon: MailIcon },
-  { name: 'LinkedIn', url: 'https://in.linkedin.com/in/shorya-bansal-621586312', icon: LinkedInIcon },
-  { name: 'Twitter', url: 'https://x.com/Shorya_codes', icon: TwitterIcon },
-  { name: 'GitHub', url: 'https://github.com/shoryabansalgithub', icon: GitHubIcon },
+  { name: 'Email', url: 'mailto:itsharshhh6@gmail.com', icon: MailIcon },
+  { name: 'LinkedIn', url: 'https://in.linkedin.com/in/harshpatil28', icon: LinkedInIcon },
+  { name: 'Twitter', url: 'https://x.com/itsharshhh6', icon: TwitterIcon },
+  { name: 'GitHub', url: 'https://github.com/CodeHarsh108', icon: GitHubIcon },
 ];
 
 export const TECH_STACK: TechItem[] = [
+  { name: 'Java', icon: <JavaIcon className="w-4 h-4" /> },
+  { name: 'Spring Boot', icon: <SpringBootIcon className="w-4 h-4" /> },
+  { name: 'Spring Framework', icon: <SpringIcon className="w-4 h-4" /> },
   { name: 'React', icon: <ReactLogo className="w-4 h-4" /> },
-  { name: 'Next.js', icon: <NextLogo className="w-4 h-4" /> },
-  { name: 'TypeScript', icon: <TypescriptLogo className="w-4 h-4" /> },
-  { name: 'Tailwind', icon: <TailwindLogo className="w-4 h-4" /> },
+  { name: 'PostgreSQL', icon: <PostgreSQLLogo className="w-4 h-4" /> },
+  { name: 'Hibernate', icon: <HibernateIcon className="w-4 h-4" /> },
+  { name: 'REST APIs', icon: <ApiIcon className="w-4 h-4" /> },
+  { name: 'Git', icon: <GitLogo className="w-4 h-4" /> },
 ];
 
 export const FULL_TECH_STACK: TechItem[] = [
+  // Programming Languages (Core)
+  { name: 'Java', icon: <JavaIcon className="w-6 h-6" />, category: 'Languages' },
+  
+  // Backend Framework (Your Expertise)
+  { name: 'Spring Boot', icon: <SpringBootIcon className="w-6 h-6" />, category: 'Backend' },
+  { name: 'Spring Framework', icon: <SpringIcon className="w-6 h-6" />, category: 'Backend' },
+  { name: 'Spring Security', icon: <ShieldIcon className="w-6 h-6" />, category: 'Backend' },
+  { name: 'Spring Data JPA', icon: <DatabaseIcon className="w-6 h-6" />, category: 'Backend' },
+  { name: 'Hibernate', icon: <HibernateIcon className="w-6 h-6" />, category: 'Backend' },
+  { name: 'RESTful APIs', icon: <ApiIcon className="w-6 h-6" />, category: 'Backend' },
+  
   // Frontend
   { name: 'React', icon: <ReactLogo className="w-6 h-6" />, category: 'Frontend' },
-  { name: 'Next.js', icon: <NextLogo className="w-6 h-6" />, category: 'Frontend' },
-  { name: 'TypeScript', icon: <TypescriptLogo className="w-6 h-6" />, category: 'Frontend' },
-  { name: 'JavaScript', icon: <JavaScriptLogo className="w-6 h-6" />, category: 'Frontend' },
-  { name: 'Tailwind CSS', icon: <TailwindLogo className="w-6 h-6" />, category: 'Frontend' },
+  { name: 'Redux', icon: <ReduxIcon className="w-6 h-6" />, category: 'Frontend' },
   { name: 'HTML5', icon: <HTMLLogo className="w-6 h-6" />, category: 'Frontend' },
   { name: 'CSS3', icon: <CSSLogo className="w-6 h-6" />, category: 'Frontend' },
-  // Backend
-  { name: 'Node.js', icon: <NodeLogo className="w-6 h-6" />, category: 'Backend' },
-  { name: 'Python', icon: <PythonLogo className="w-6 h-6" />, category: 'Backend' },
-  // Database
-  { name: 'MongoDB', icon: <MongoDBLogo className="w-6 h-6" />, category: 'Database' },
+  { name: 'Tailwind CSS', icon: <TailwindLogo className="w-6 h-6" />, category: 'Frontend' },
+  { name: 'Bootstrap', icon: <BootstrapIcon className="w-6 h-6" />, category: 'Frontend' },
+  
+  // Databases
   { name: 'PostgreSQL', icon: <PostgreSQLLogo className="w-6 h-6" />, category: 'Database' },
-  // DevOps & Tools
-  { name: 'Git', icon: <GitLogo className="w-6 h-6" />, category: 'Tools' },
-  { name: 'Docker', icon: <DockerLogo className="w-6 h-6" />, category: 'Tools' },
-  { name: 'AWS', icon: <AWSLogo className="w-6 h-6" />, category: 'Tools' },
+  { name: 'MySQL', icon: <MySqlIcon className="w-6 h-6" />, category: 'Database' },
+  { name: 'MongoDB', icon: <MongoDBLogo className="w-6 h-6" />, category: 'Database' },
+  { name: 'Redis', icon: <RedisIcon className="w-6 h-6" />, category: 'Database' },
+  
+  // Developer Tools
+  { name: 'Git & GitHub', icon: <GitLogo className="w-6 h-6" />, category: 'Tools' },
+  { name: 'Postman', icon: <PostmanIcon className="w-6 h-6" />, category: 'Tools' },
+  { name: 'Maven', icon: <MavenIcon className="w-6 h-6" />, category: 'Tools' },
+  { name: 'Swagger', icon: <SwaggerIcon className="w-6 h-6" />, category: 'Tools' },
+  { name: 'IntelliJ IDEA', icon: <IntelliJIcon className="w-6 h-6" />, category: 'Tools' },
   { name: 'VS Code', icon: <VsCodeLogo className="w-6 h-6" />, category: 'Tools' },
-  { name: 'Figma', icon: <FigmaLogo className="w-6 h-6" />, category: 'Tools' },
+  
+  // Testing
+  { name: 'JUnit', icon: <JUnitIcon className="w-6 h-6" />, category: 'Testing' },
+  { name: 'Mockito', icon: <MockitoIcon className="w-6 h-6" />, category: 'Testing' },
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    company: "Excelerate",
-    role: "Data Engineer Early Intern",
-    period: "Nov 2024 - Nov 2024",
-    description: "Assisted in building data pipelines and optimizing data flow. Collaborated with the team to improve data quality and accessibility.",
-    tech: ["Python", "SQL", "AWS"],
+    company: "VaultOfCodes",
+    role: "Java Developer Intern",
+    period: "June 2024 - July 2024", // Update with actual dates
+    description: "Developed 3 Java-based projects collaborating with a team of 4, enhancing practical software development skills and backend logic.",
+    tech: ["Java", "Spring Boot", "Git"],
     current: false,
   },
-  {
-    company: "Headstarter AI",
-    role: "Software Engineer Intern",
-    period: "Aug 2024 - Sep 2024",
-    description: "Developed features for the AI-powered platform using Next.js. Implemented responsive UI components and integrated APIs.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
-  },
+  
 ];
 
 export const EDUCATION: EducationItem[] = [
   {
-    institution: "JECRC University",
-    degree: "B.Tech in Computer Science",
-    period: "2024 - 2028",
-    location: "Jaipur, India",
-    grade: "CGPA: 6.9"
+    institution: "Acropolis Institute of Technology and Research",
+    degree: "B.Tech in Computer Science and Engineering",
+    period: "July 2023 – Present",
+    location: "Indore, India",
+    grade: "CGPA: 8.10",
+    additionalInfo: undefined,
+    coursework: false
   }
 ];
 
 export const PROJECTS: ProjectItem[] = [
   {
-    title: "Kisan Mitra",
-    description: "One-stop digital companion that helps farmers track crops, weather, subsidies, and market rates in one place.",
-    tags: ["Next.js", "Tailwind", "Farmer Tech"],
-    link: "https://demo2-0.vercel.app/",
-    preview: "/projects/kisaan.png"
+    title: "Wealth Map",
+    description: "Real-time property search platform utilizing Spring Boot, PostgreSQL/PostGIS, and Leaflet, enabling bounding box and radius searches with 5000+ weekly active users.",
+    tags: ["Spring Boot", "PostgreSQL", "PostGIS", "Google Maps API"],
+    github: "https://github.com/CodeHarsh108/Wealth-Map",
+    preview: "/projects/wealthmap.jpeg",
+    subtitle: undefined
   },
   {
-    title: "Crypt",
-    description: "Lightweight crypto tracker that keeps an eye on top coins, daily movements, and personalized watchlists.",
-    tags: ["React", "Typescript", "API"],
-    link: "#",
-    github: "#",
-    preview: "/projects/crypt .png"
+    title: "Journal App",
+    description: "Secure journal application with Spring Boot, MongoDB, Redis, and JWT authentication, featuring real-time caching and weather API integration.",
+    tags: ["Spring Boot", "MongoDB", "Redis", "JWT", "Swagger"],
+    github: "https://github.com/CodeHarsh108/Journal-App",
+    preview: "/projects/ja.png",
+    subtitle: undefined
   },
   {
-    title: "Mindful — Your AI Therapist",
-    description: "Guided support experience that blends CBT-inspired prompts with AI to help users reflect and journal safely.",
-    tags: ["Next.js", "OpenAI", "UI"],
-    link: "https://mindful-bice.vercel.app/",
-    github: "https://github.com/shoryabansalgithub/mindful",
-    preview: "/projects/mindful.png"
+    title: "AyurSamhita - A HealthCare Platform",
+    description: "Arogya: a digital bridge uniting Ayurveda and modern medicine to deliver accessible, culturally rooted healthcare to underserved India.",
+    tags: ["SpringBoot", "React", "MongoDB"],
+    github: "hhttps://github.com/CodeHarsh108/Minor-Sem5",
+    preview: "/projects/image.png",
+    subtitle: undefined
   },
-  {
-    title: "Spartan",
-    description: "Browser extension for ChatGPT that lets you remix conversation backgrounds and vibe while you chat.",
-    tags: ["Extension", "Tailwind", "UX"],
-    github: "https://github.com/shoryabansalgithub/chatgpt-gradient-extension",
-    preview: "/projects/damn.png"
-  }
+ 
 ];
 
 export const NOW_BUILDING = {
-  title: "remoteIQ",
-  description: "A mock interview platform",
-  link: "#",
+  title: "QuickConnect",
+  description: "A Real Time Chat Application using React and Spring Boot.",
 };
 
 export const NOW_PLAYING = {
